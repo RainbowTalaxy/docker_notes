@@ -224,4 +224,5 @@ volumes:
 可以用 `docker-compose down` 终止整个应用栈，或者点击 Docker Dashboard 中的垃圾桶。
 
 > 默认情况下，挂载卷是不会随之移除的。可以添加 `--volumes` 来移除挂载卷。
+
 > 同样的，Docker Dashboard 也不会移除挂载卷。
