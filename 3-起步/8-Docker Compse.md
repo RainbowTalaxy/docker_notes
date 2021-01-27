@@ -57,7 +57,7 @@ docker run -dp 3000:3000 \
         image: node:12-alpine
         command: sh -c "yarn install && yarn run dev"
     ```
-3. 接着定义 `ports` ，我们将使用[短语法](https://docs.docker.com/compose/compose-file/#short-syntax-1)，但也可以用[长语法](https://docs.docker.com/compose/compose-file/#long-syntax-1)。
+3. 接着定义 `ports` ，我们将使用[短语法](https://github.com/compose-spec/compose-spec/blob/master/spec.md#short-syntax)，但也可以用[长语法](https://github.com/compose-spec/compose-spec/blob/master/spec.md#long-syntax)。
     ```yml
     version: "3.7"
 
@@ -124,7 +124,7 @@ docker run -d \
       mysql:
         image: mysql:5.7
     ```
-2. 接着，定义挂载卷映射。当我们使用 `docker run` 运行容器时，命名挂载卷会自动创建。但是，Compose 不会自动创建。我们需要在顶级 `volumes:` 中定义挂载卷，并明确其在服务配置中的挂载点。这里可以仅提供挂载卷名字，来使用默认选项。还有[更多的选项](https://docs.docker.com/compose/compose-file/#volume-configuration-reference)可以使用。
+2. 接着，定义挂载卷映射。当我们使用 `docker run` 运行容器时，命名挂载卷会自动创建。但是，Compose 不会自动创建。我们需要在顶级 `volumes:` 中定义挂载卷，并明确其在服务配置中的挂载点。这里可以仅提供挂载卷名字，来使用默认选项。还有[更多的选项](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes-top-level-element)可以使用。
     ```yml
     version: "3.7"
 
